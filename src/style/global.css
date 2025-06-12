@@ -61,6 +61,7 @@ body.dark-mode nav {
 .tag-title {
 	font-weight: 400;
 	color: var(--black);
+	text-align: center;
 }
 
 @media (prefers-color-scheme: dark) {

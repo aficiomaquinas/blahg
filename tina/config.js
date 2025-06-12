@@ -30,7 +30,7 @@ export default defineConfig({
 					tags: [],
 				}),
 				ui: {
-					dateFormat: "MMM DD YYYY",
+					dateFormat: "DD MMM YYYY",
 					filename: {
 						readonly: false,
 						slugify: (values) => {
@@ -102,14 +102,14 @@ export default defineConfig({
 						label: "Added",
 						name: "added",
 						type: "datetime",
-						dateFormat: "MMM DD YYYY",
+						dateFormat: "DD MMM YYYY",
 						required: true,
 					},
 					{
 						label: "Updated",
 						name: "updated",
 						type: "datetime",
-						dateFormat: "MMM DD YYYY",
+						dateFormat: "DD MMM YYYY",
 					},
 					{
 						type: "rich-text",

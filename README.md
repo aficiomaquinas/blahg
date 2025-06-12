@@ -1,16 +1,16 @@
-# Cassidy's blog template
+# Blog personal de Víctor González
 
 [![Cloudflare Pages Status](https://img.shields.io/badge/Cloudflare-Pages-orange)](https://pages.cloudflare.com/)
 
-Hello, welcome. This is a blog ("blahg" is the proper spelling for Chicagoans) template. It's built with [Astro](https://astro.build), and uses [TinaCMS](https://tina.io) to edit the content!
+Este es mi blog personal ("blahg" es la ortografía adecuada para los habitantes de Chicago) construido con [Astro](https://astro.build), y utiliza [TinaCMS](https://tina.io) para editar el contenido.
 
 ![cover](https://github.com/cassidoo/blahg/assets/1454517/b56ff04f-9499-48e7-be62-d9b422c4287d)
 
-## See the blahg
+## Ver el blog
 
-[Your Cloudflare Pages URL](https://your-project.pages.dev/)
+[Tu URL de Cloudflare Pages](https://your-project.pages.dev/)
 
-## To use the template
+## Para usar la plantilla
 
 ### Para Cloudflare Pages:
 
@@ -69,23 +69,22 @@ After this, you can add your content to `posts/` with Markdown files, or with Ti
 
 And finally, please ping me (via social media, or in a GitHub Issue, or whatever) if you use this template! I would love to see your writing and subscribe to your RSS feed!
 
-## Run it yourself
+## Ejecutar localmente
 
-All commands are run from the root of the project, from a terminal:
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
-| Command                          | Action                                                        |
+| Comando                          | Acción                                                        |
 | :------------------------------- | :------------------------------------------------------------ |
-| `npm install`                    | Installs dependencies                                         |
-| `npm run dev`                    | Starts local dev server at `localhost:4321`                   |
-| `npx tinacms dev -c 'astro dev'` | Manually run local server if the regular command doesn't work |
-| `npm run build`                  | Build your production site to `./dist/`                       |
-| `npm run preview`                | Preview your build locally, before deploying                  |
+| `npm install`                    | Instala las dependencias                                      |
+| `npm run dev`                    | Inicia el servidor de desarrollo local en `localhost:4321`    |
+| `npx tinacms dev -c 'astro dev'` | Ejecutar manualmente el servidor local si el comando regular no funciona |
+| `npm run build`                  | Construye tu sitio de producción en `./dist/`                 |
+| `npm run preview`                | Previsualiza tu build localmente, antes de desplegarlo        |
 
-You go to `localhost:4321/admin/index.html` to see the CMS and use it.
-
+Ve a `localhost:4321/admin/index.html` para ver el CMS y usarlo.
 
 Para Cloudflare Pages, configura estas mismas variables en tu dashboard de Cloudflare Pages.
 
-If you get a remote GraphQL schema error, chances are you need to update TinaCMS, [details here](https://tina.io/docs/introduction/faq#how-do-i-resolve-the-local-graphql-schema-doesnt-match-the-remote-graphql-schema-errors)!
+Si obtienes un error de esquema GraphQL remoto, probablemente necesites actualizar TinaCMS, [detalles aquí](https://tina.io/docs/introduction/faq#how-do-i-resolve-the-local-graphql-schema-doesnt-match-the-remote-graphql-schema-errors)!
 
-**Have fun!**
+**¡Diviértete!**

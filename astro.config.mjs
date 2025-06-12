@@ -12,6 +12,10 @@ export default defineConfig({
 		},
 	}),
 	integrations: [sitemap()],
+	i18n: {
+		defaultLocale: "es",
+		locales: ["es"]
+	},
 	markdown: {
 		shikiConfig: {
 			theme: "material-theme-darker",

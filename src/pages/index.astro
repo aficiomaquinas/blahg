@@ -15,7 +15,7 @@ const tags = getTags(posts);
 ---
 
 <!doctype html>
-<html lang="en-us">
+<html lang="es">
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	<body>
 		<Header title={SITE_TITLE} />
@@ -24,15 +24,15 @@ const tags = getTags(posts);
 
 			<br />
 
-			<h3>Here's my most recent posts</h3>
+			<h3>Publicaciones recientes:</h3>
 
 			<HomePosts allPosts={posts} />
 
-			<p class="center">
-				You can also <a href="https://www.victtor.com/rss.xml">
-					subscribe with RSS!
+			<!-- <p class="center">
+				También puedes <a href="https://www.victtor.com/rss.xml">
+					suscribirte con RSS!
 				</a>
-			</p>
+			</p> -->
 			<br />
 
 			<Tags tags={tags} all />

@@ -15,27 +15,27 @@ let {
 } = Astro.props;
 
 added = new Date(added).toLocaleDateString(
-	"en-us",
+	"es-ES",
 	{
 		year: "numeric",
-		month: "short",
+		month: "long",
 		day: "numeric",
 	}
 );
 
 if (updated) {
 	updated = new Date(updated).toLocaleDateString(
-		"en-us",
+		"es-ES",
 		{
 			year: "numeric",
-			month: "short",
+			month: "long",
 			day: "numeric",
 		}
 	);
 }
 ---
 
-<html lang="en-us">
+<html lang="es">
 	<BaseHead title={title} description={description} />
 
 	<body>
@@ -45,7 +45,7 @@ if (updated) {
 				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 				<h1 class="article-title">{title}</h1>
 				{updated ?
-					<span><time>{added}</time>, last updated on <time>{updated}</time></span>
+					<span><time>{added}</time>, última actualización el <time>{updated}</time></span>
 					:
 					<span>{added && <time>{added}</time>}</span>
 				}
