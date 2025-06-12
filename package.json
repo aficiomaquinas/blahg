@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "npx tinacms dev -c 'astro dev'",
 		"start": "astro dev",
-		"build": "tinacms build --skip-cloud-checks && astro build",
+		"build": "tinacms build --skip-cloud-checks --skip-indexing && astro build",
 		"preview": "astro preview",
 		"astro": "astro"
 	},
