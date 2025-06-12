@@ -1,12 +1,16 @@
 import { defineConfig } from "tinacms";
 
-// Your hosting provider likely exposes this as an environment variable
-const branch = process.env.HEAD || "main";
+// Configuración de branch para Cloudflare Pages
+const branch =
+	process.env.TINA_BRANCH ||
+	process.env.CF_PAGES_BRANCH ||
+	process.env.HEAD ||
+	"main";
 
 export default defineConfig({
 	branch,
-	clientId: process.env.TINACLIENTID, // Get this from tina.io
-	token: process.env.TINATOKEN, // Get this from tina.io
+	clientId: process.env.TINA_CLIENT_ID, // Actualizado para Cloudflare Pages
+	token: process.env.TINA_TOKEN,
 
 	build: {
 		outputFolder: "admin",
@@ -123,7 +127,7 @@ export default defineConfig({
 	},
 	search: {
 		tina: {
-			indexerToken: process.env.TINASEARCH,
+			indexerToken: process.env.TINA_SEARCH_TOKEN, // Actualizado para consistencia
 			stopwordLanguages: ["eng"],
 		},
 		indexBatchSize: 50,

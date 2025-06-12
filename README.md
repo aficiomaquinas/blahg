@@ -1,6 +1,6 @@
 # Cassidy's blog template
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/eab04209-5f7f-41ed-a8dd-c45a9ebb1834/deploy-status)](https://app.netlify.com/sites/blahg/deploys)
+[![Cloudflare Pages Status](https://img.shields.io/badge/Cloudflare-Pages-orange)](https://pages.cloudflare.com/)
 
 Hello, welcome. This is a blog ("blahg" is the proper spelling for Chicagoans) template. It's built with [Astro](https://astro.build), and uses [TinaCMS](https://tina.io) to edit the content!
 
@@ -8,9 +8,49 @@ Hello, welcome. This is a blog ("blahg" is the proper spelling for Chicagoans) t
 
 ## See the blahg
 
-[blahg.netlify.app](https://blahg.netlify.app/)
+[Your Cloudflare Pages URL](https://your-project.pages.dev/)
 
 ## To use the template
+
+### Para Cloudflare Pages:
+
+1. **Conecta tu repositorio a Cloudflare Pages:**
+   - Ve a [Cloudflare Dashboard](https://dash.cloudflare.com/)
+   - Selecciona "Workers & Pages" > "Create" > "Pages"
+   - Conecta tu repositorio de GitHub
+
+2. **Configura las variables de entorno en Cloudflare Pages:**
+   - Ve a tu proyecto en Cloudflare Pages
+   - Configuración > Variables de entorno
+   - Agrega las siguientes variables:
+   ```
+   TINA_CLIENT_ID=tu_client_id_aqui
+   TINA_TOKEN=tu_token_aqui
+   TINA_SEARCH_TOKEN=tu_search_token_aqui
+   ```
+
+3. **Obtén las credenciales de TinaCMS:**
+   - Haz una cuenta en [tina.io](https://tina.io/)
+   - Crea un nuevo proyecto
+   - Copia las credenciales desde tu dashboard de TinaCMS
+
+4. **Configura tu sitio:**
+   - Actualiza `astro.config.mjs` con tu dominio de Cloudflare Pages
+   - Edita `src/config.js` con tu configuración personalizada
+   - Actualiza la línea 1 de `public/robots.txt` con tu URL
+   - Agrega tus enlaces en `src/components/Header.astro`
+   - Actualiza la introducción en `pages/about.md`
+   - Edita las imágenes en `public/` (opcional)
+   - Edita las etiquetas que quieras en `tina/config.js` (opcional)
+
+5. **Configuración de build en Cloudflare Pages:**
+   - Comando de build: `npm run build`
+   - Directorio de build: `dist`
+   - Variable de entorno: Node.js version = `18` o superior
+
+Después de esto, puedes agregar tu contenido a `posts/` con archivos Markdown, ¡o con TinaCMS yendo a `tuurl.pages.dev/admin`!
+
+### Para otras plataformas de hosting:
 
 - Connect to your chosen hosting provider (see Deploy to Netlify button below if you want to go that route, otherwise use the GitHub template button above and pick a different one)
 - Make an account at [tina.io](https://tina.io/)
@@ -41,13 +81,19 @@ All commands are run from the root of the project, from a terminal:
 | `npm run build`                  | Build your production site to `./dist/`                       |
 | `npm run preview`                | Preview your build locally, before deploying                  |
 
-You go to `localhost:4321/admin/index.html` to see the CMS and use it. If you want to clone this for yourself, you'll need a `.env.development` file that has the following in it:
+You go to `localhost:4321/admin/index.html` to see the CMS and use it.
 
+## Environment Variables
+
+Para desarrollo local, necesitarás un archivo `.env` con las siguientes variables:
+
+```env
+TINA_CLIENT_ID=<from tina.io>
+TINA_TOKEN=<from tina.io>
+TINA_SEARCH_TOKEN=<from tina.io>
 ```
-TINACLIENTID=<from tina.io>
-TINATOKEN=<from tina.io>
-TINASEARCH=<from tina.io>
-```
+
+Para Cloudflare Pages, configura estas mismas variables en tu dashboard de Cloudflare Pages.
 
 If you get a remote GraphQL schema error, chances are you need to update TinaCMS, [details here](https://tina.io/docs/introduction/faq#how-do-i-resolve-the-local-graphql-schema-doesnt-match-the-remote-graphql-schema-errors)!
 
