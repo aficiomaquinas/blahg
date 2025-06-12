@@ -1,15 +1,11 @@
 import { defineConfig } from "tinacms";
 
-// Configuración de branch para Cloudflare Pages
-const branch =
-	process.env.TINA_BRANCH ||
-	process.env.CF_PAGES_BRANCH ||
-	process.env.HEAD ||
-	"main";
+// Your hosting provider likely exposes this as an environment variable
+const branch = process.env.HEAD || "main";
 
 export default defineConfig({
 	branch,
-	clientId: process.env.TINA_CLIENT_ID, // Actualizado para Cloudflare Pages
+	clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID, // Actualizado para Cloudflare Pages
 	token: process.env.TINA_TOKEN,
 
 	build: {

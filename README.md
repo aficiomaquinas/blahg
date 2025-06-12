@@ -24,7 +24,7 @@ Hello, welcome. This is a blog ("blahg" is the proper spelling for Chicagoans) t
    - Configuración > Variables de entorno
    - Agrega las siguientes variables:
    ```
-   TINA_CLIENT_ID=tu_client_id_aqui
+   NEXT_PUBLIC_TINA_CLIENT_ID=tu_client_id_aqui
    TINA_TOKEN=tu_token_aqui
    TINA_SEARCH_TOKEN=tu_search_token_aqui
    ```
@@ -83,15 +83,6 @@ All commands are run from the root of the project, from a terminal:
 
 You go to `localhost:4321/admin/index.html` to see the CMS and use it.
 
-## Environment Variables
-
-Para desarrollo local, necesitarás un archivo `.env` con las siguientes variables:
-
-```env
-TINA_CLIENT_ID=<from tina.io>
-TINA_TOKEN=<from tina.io>
-TINA_SEARCH_TOKEN=<from tina.io>
-```
 
 Para Cloudflare Pages, configura estas mismas variables en tu dashboard de Cloudflare Pages.
 
