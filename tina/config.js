@@ -21,27 +21,6 @@ export default defineConfig({
 	schema: {
 		collections: [
 			{
-				name: "page",
-				label: "Páginas",
-				path: "src/pages",
-				match: {
-					include: "**/*.md"
-				},
-				ui: {
-					filename: {
-						readonly: true,
-					},
-				},
-				fields: [
-					{
-						type: "rich-text",
-						name: "body",
-						label: "Contenido",
-						isBody: true,
-					},
-				],
-			},
-			{
 				name: "post",
 				label: "Posts",
 				path: "posts",
